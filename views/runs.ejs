@@ -1,0 +1,19 @@
+
+
+<%- include('header', { title: 'Available Runs' }) %>
+
+<div class="container mt-4">
+  
+  <ul class="list-group">
+    <% runs.forEach((run) => { %>
+      <li class="list-group-item">
+        <%= run.name %> (<%= run.run_type %>) <!-- Display run_type with run name -->
+        <p>Date: <%= run.date %></p>
+        <p>Location: <%= run.city %>, <%= run.state %></p>
+        <!-- Add more run details as needed -->
+      </li>
+    <% }); %>
+  </ul>
+</div>
+
+<%- include('footer') %>
